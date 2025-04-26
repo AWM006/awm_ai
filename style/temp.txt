@@ -1,0 +1,77 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    height: 100%;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    width: 3rem;
+    height: 3rem;
+}
+.logsys{
+    width: 50%;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logsys a{
+    text-decoration: none;
+}
+.qa{
+    display: flex;
+    justify-content: space-evenly;
+}
+.queans{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: 5px solid gray;
+    width: 95%;
+    height: 86vh;
+    max-height: 86vh;
+    overflow-x: auto;
+    border-radius: 13px;
+}
+.queans div p{
+    color: black;
+}
+.inputField{
+    width: 95%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 6px;
+    justify-content: space-between;
+}
+.askField{
+    border-radius: 6px;
+    width: 70%;
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+}
+.ask{
+    font-size: 15px;
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+}
+.mic{
+    background-color: white;
+    width: 15%;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+.send{
+    background-color: white;
+    width: 10%;
+    margin-left: 5px;
+    border-radius: 50%;
+    position: relative;
+    right: 1%;
+}

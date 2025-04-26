@@ -1,0 +1,98 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+    height: 100%;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header img{
+    width: 3rem;
+    height: 3rem;
+}
+.logsys{
+    width: 50%;
+    background-color: bisque;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logsys a{
+    text-decoration: none;
+}
+.qa{
+    display: flex;
+    justify-content: space-evenly;
+}
+.queans{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: 5px solid gray;
+    width: 95%;
+    height: 90vh;
+    max-height: 70vh;
+    overflow-x: auto;
+    border-radius: 13px;
+}
+.queans div p{
+    color: black;
+}
+.inputField{
+    width: 95%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    border-radius: 6px;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+.askField{
+    border-radius: 6px;
+    width: 70%;
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+}
+.ask{
+    font-size: 15px;
+    width: 70%;
+    border: none;
+    border-radius: 10px;
+}
+.mic{
+    background-color: white;
+    height: 5rem;
+    width: 5rem;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-image: url(../image/micoff.webp);
+    background-size: cover;
+    background-position: center;
+}
+.send{
+    background-color: white;
+    height: 5rem;
+    width: 5rem;
+    margin-left: 5px;
+    border-radius: 50%;
+    position: relative;
+    right: 1%;
+    background-image: url(../image/send.png);
+    background-size: cover;
+    background-position: center;
+}
+.nosend{
+    height: 5rem;
+    width: 5rem;
+    margin-left: 5px;
+    border-radius: 50%;
+    position: relative;
+    right: 1%;
+    background-image: url(../image/sended.png);
+    background-size: cover;
+    background-position: center;
+}
