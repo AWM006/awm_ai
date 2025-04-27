@@ -96,3 +96,8 @@ header img{
     background-size: cover;
     background-position: center;
 }
+.time{
+    color: white;
+    font-size: 120%;
+    align-self: center;
+}

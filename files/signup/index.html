@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="files/style.css">
+</head>
+<body>
+  <div class="main">
+        <div class="mainform">
+            <center>
+            <div class="avatar">
+                    <div class="eyes">
+                        <div class="eye">
+                        <div class="pupil"></div>
+                        </div>
+                        <div class="eye">
+                        <div class="pupil"></div>
+                        </div>
+                    </div>
+            </div>
+            </center>
+            <form action="../php/signup.php" method="post" enctype="multipart/form-data">
+    
+            <br>
+            <label class="nametext">Enter your Full Name</label><br>
+            <input type="text" placeholder="NAME" class="name" name="name" required>
+            <br><br>
+            <label class="nametext">Enter your PH no</label><br>
+            <input type="tel" placeholder="PH NO" class="phone" name="phone" required>
+            <br><br>
+            <div class="passShow"><label class="passwordtext">Enter Password</label><div><font class="show">SHOW</font><input type="checkbox" class="tick"></div></div><br>
+            <input type="password" placeholder="PASSWORD" class="pass" name="pass">
+            <br><br>
+            <label class="nametext">Re Enter Password</label><br>
+            <input type="password" placeholder="PASSWORD" class="repass" name="repass">
+            <br><br>
+            <label class="nametext">upload image</label><br>
+            <input type="file" accept="image/*" class="image" name="image" required>
+            <center><input type="submit" class="submit" name="submit" disabled></center>
+
+            </form>
+            <font class="redirect">already have a accout?</font><a href="../login/index.html" class="re">click here</a>
+        </div>
+  </div>
+    <script src="files/script.js"></script>
+</body>
+</html>

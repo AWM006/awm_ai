@@ -1,3 +1,8 @@
+<?php
+include("./files/php/connection.php");
+session_start();
+error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +13,27 @@
 </head>
 <body>
    <header>
-        <img src="image/denji.jpeg">
+        <div>
+            <img src="image/denji.jpeg">
             <a style="color: white;align-self: center;">AWM AI</a>
+        </div>
+        <a class="time" style="color='white';">10 10 10</a>
         <div class="logsys">
-            <a href="">login</a>
-            <a href="">sign in</a>
+            <?php
+                if($_SESSION['session_id']){
+                    $location = "files/update_data/update.php?id=".$_SESSION['session_id'];
+                
+            ?>
+                    <img src="./image/database_img/<?php echo $_SESSION['session_img'];?>" class="profile-img" alt="CLICK TO CHANGE DATA" onclick="window.location.href='<?php echo $location?>'">
+                    <a><?php echo $_SESSION['session_name'];?></a>
+                    <a href="files/php/logout.php">Log OUT</a>
+            <?php
+                }
+                else{
+            ?>
+                    <a href="files/login/">login</a>
+                    <a href="files/signup/">sign in</a>
+            <?php } ?>
         </div>
     </header>
     <div class="qa">
@@ -20,7 +41,7 @@
 
             <div style="width: 95%;background-color: antiquewhite;border-radius: 7px;position: sticky;right: 50%;display: flex;justify-content: center;align-items: center;margin-top: 5px;">
                 <div style="width: 95%;">
-                    <p>Hello There How Can I help you</p>
+                    <p>Hello <b><?php echo $_SESSION['session_name'];?></b> How Can I help you</p>
                 </div>
             </div>
             

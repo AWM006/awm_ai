@@ -63,10 +63,54 @@ async function chatAnswer(que){
     massegeBox.insertAdjacentHTML('beforeend',`
         <div class="loading" style="width: 95%;background-color: antiquewhite;border-radius: 7px;position: sticky;right: 50%;display: flex;justify-content: center;align-items: center;margin-top: 5px;">
             <div style="width: 95%;">
-                <p>loading...</p>
+                <p>loading 
+                    <a class="first">.</a>
+                    <a class="second">.</a>
+                    <a class="third">.</a>
+                </p>
             </div>
         </div>
     `)
+                        let first = document.querySelector(".first");  //function blink on loading massage
+                        let second = document.querySelector(".second");
+                        let third = document.querySelector(".third");
+                        function start() {
+                        let firstblink =()=>{
+                            setTimeout(()=>{
+                                first.innerText = '.';
+                                second.innerText = ' ';
+                                third.innerText = ' ';
+                            },1000)
+                        }
+                        let secondblink =()=>{
+                            setTimeout(()=>{
+                                first.innerText = '.';
+                                second.innerText = '.';
+                                third.innerText = ' ';
+                            },2000)
+                        }
+                        let thirdblink =()=>{
+                            setTimeout(()=>{
+                                first.innerText = '.';
+                                second.innerText = '.';
+                                third.innerText = '.';
+                            },3000)
+                        }
+                        let normal=()=>{
+                            setTimeout(()=>{
+                                first.innerText = '';
+                                second.innerText = '';
+                                third.innerText = '';
+                            },4000)
+                        }
+
+                            firstblink();
+                            secondblink();
+                            thirdblink();
+                            normal();
+                        }
+                        let stop =setInterval(start, 5000); 
+                        start();//----------------------------------//finish blink
     //fetch answer
     try{
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
@@ -94,7 +138,8 @@ async function chatAnswer(que){
         const data = await response.json();
         let nosend = document.querySelector(".nosend");//change send button
         nosend.className = "send"; 
-        let loading = document.querySelector(".loading").remove();//change loading text
+        document.querySelector(".loading").remove();//change loading text
+        clearInterval(stop); //stop loading blink
 
         let gotMessage = data.choices[0].message.content;
         gotMessage = gotMessage.replace(/\\boxed\{([\s\S]*?)\}/g, '$1');
@@ -124,3 +169,25 @@ async function chatAnswer(que){
         `)
     }
 }
+
+
+//time function
+
+function updateClock() {
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    const timeString = hours+':'+minutes+':'+seconds;
+
+    document.querySelector(".time").innerText = timeString;
+}
+
+setInterval(updateClock, 1000); //call rapidly with 1 sec  delay
+updateClock();

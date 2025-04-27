@@ -1,0 +1,132 @@
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #4F6367;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.mainform{
+    height: 80rem;
+    width: 50rem;
+    background-color: black;
+    margin-top: 5rem;
+    border: 3rem solid #7A9E9F;
+}
+.avatar{
+    height: 25rem;
+    width: 25rem;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    top: 5rem;
+    margin-bottom: 20%;
+    background-image: url("images/Denji\ Clown\ Icon.jpeg");
+    background-size:cover ;
+}
+.eyes {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 20px;
+  }
+  
+  .eye {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30%;
+    left: 2%;
+  }
+  
+  .pupil {
+    width: 15px;
+    height: 15px;
+    border-radius: 101px;
+    background-color: #000;
+    position: relative;
+    bottom: 10%;
+    margin: 0%;
+    padding: 0%;
+  }
+.nametext{
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    left: 5%;
+}
+.name{
+    height: 3rem;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    font-size: 2rem;
+}
+.phone{
+    height: 3rem;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    font-size: 2rem;
+}
+.passShow{
+    display: flex;
+    justify-content: space-between;
+}
+.passwordtext{
+    color: white;
+    font-size: 3rem;
+    padding-left: 5%;
+}
+.show{
+    font-size: 2rem;
+    color: white;
+}
+.tick{
+    height: 2rem;
+    width: 2rem;
+}
+.pass{
+    height: 3rem;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    font-size: 2rem;  
+}
+.repass{
+    height: 3rem;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    font-size: 2rem;  
+}
+.image{
+    width: 100%;
+    margin-left: 5%;
+}
+.submit{
+    height: 4rem;
+    width: 50%;
+    background-color: purple;
+    font-size: 3rem;
+}
+.redirect{
+    color: purple;
+    font-size: 2rem;
+}
+.re{
+    text-decoration: none;
+    font-size: 1.5rem;
+}

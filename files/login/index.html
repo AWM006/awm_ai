@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="files/style.css">
+</head>
+<body>
+  <div class="main">
+        <div class="mainform">
+            <center>
+            <div class="avatar">
+                    <div class="eyes">
+                        <div class="eye">
+                        <div class="pupil"></div>
+                        </div>
+                        <div class="eye">
+                        <div class="pupil"></div>
+                        </div>
+                    </div>
+            </div>
+            </center>
+            <br>
+            <form action="../php/login.php" method="post">
+            <label class="phonetext">Enter Mobile Number</label><br>
+            <input type="tel" placeholder="phone" class="phone" name="phone" required>
+            <br>
+            <br>
+            <div class="passShow"><label class="passwordtext">Enter Password</label><div><font class="show">SHOW</font><input type="checkbox" class="tick"></div></div><br>
+            <input type="password" placeholder="PASSWORD" class="pass" name="pass" required>
+            <br><br>
+            <center><input type="submit" class="submit" name="submit"></center>
+            </form>
+            <br>
+            <font class="redirect">don't have a accout?</font><a href="../signup/index.html" class="re">click here</a>
+        </div>
+  </div>
+    <script src="files/script.js"></script>
+</body>
+</html>
