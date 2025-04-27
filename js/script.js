@@ -41,7 +41,7 @@ else{
 
 
 
-send.addEventListener('click', () =>{
+send.addEventListener('click', ()=>{
     let x = questionBox.value;
     if(x != ''){
         massegeBox.insertAdjacentHTML('beforeend',`
@@ -55,7 +55,11 @@ send.addEventListener('click', () =>{
         chatAnswer(x);
     }
 })
-
+document.addEventListener('keydown', function(event) { //when press enter this activate the send.addeventlistner without click
+    if (event.key === 'Enter') {
+        send.click(); 
+    }
+});
 
 async function chatAnswer(que){
     send.className = "nosend"; //change send button
@@ -116,11 +120,13 @@ async function chatAnswer(que){
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
             headers: {
-              "Authorization": "Bearer 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",
+              "Authorization": "Bearer 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",
+              "HTTP-Referer": "<YOUR_SITE_URL>", // Optional. Site URL for rankings on openrouter.ai.
+              "X-Title": "<YOUR_SITE_NAME>", // Optional. Site title for rankings on openrouter.ai.
               "Content-Type": "application/json"
             },
             body: JSON.stringify({
-              "model": "deepseek/deepseek-r1-zero:free",
+              "model": "microsoft/mai-ds-r1:free",
               "messages": [
                 {
                   "role": "user",
